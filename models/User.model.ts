@@ -7,13 +7,16 @@ const UserSchema = new mongoose.Schema(
             defualt: "Anonymous",
             min: 2,
             max: 100,
-            required: [true, "Name must be provided"]
+            required: [true, "Name must be provided"],
+            unique: true,
         },    
         email: {
                 type: String,
                 match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
                 min:2,
-                max: 100
+                max: 100,
+                required: [true, "Email must be provided"],
+                unique: true
         },
     },
     {

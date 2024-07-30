@@ -2,6 +2,7 @@ import React from 'react'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { createNewUser } from '@/lib/actions/user.actions'
+import ActionButton from '../custom/ActionButton'
 
 const NewUserForm = () => {
   return (
@@ -11,7 +12,7 @@ const NewUserForm = () => {
             <Input required type="text" name="name" id="" />
             <label htmlFor="email">Your Email: </label>
             <Input required type="email" name="email" id="" />
-            <Button type="submit">Add User</Button>
+            <ActionButton title="Add User"  type="submit"/>
         </form>
     </div>
   )
